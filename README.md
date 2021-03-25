@@ -11,6 +11,7 @@ ToDo:
 - heating control
 
 Next step:
+- database with default settings
 - connect with bluetooth speakers
 - audio player
 - video player
