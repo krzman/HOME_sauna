@@ -1,11 +1,17 @@
+from django.http import JsonResponse
 from django.shortcuts import render
-from saunaapp.scripts.read_temp import getTemperature
+from django.views import View
+from saunaapp.models import *
 
 
 # Create your views here.
 
-def show_temp(request):
-    temp = getTemperature()
+class Main(View):
+    def get(self, request):
+        temp = 'Czekam na odczyt'
+        return render(request, 'main.html', {'temp': temp})
 
-
-    return render(request, 'main.html', {'temp': temp})
+class GetTemp(View):
+    def get(self,request):
+        temp = Temp.objects.last().temp
+        return JsonResponse(temp, safe=False)

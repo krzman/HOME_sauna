@@ -10,7 +10,8 @@ def getTemperature():
         except Exception:
             print('error')
         else:
-            temp = int(sensor.get_temperature())
+            # temp = int(sensor.get_temperature())
+            temp = sensor.get_temperature()
             tempOK = True
 
     return temp

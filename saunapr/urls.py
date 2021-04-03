@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from saunaapp.views import show_temp
+from saunaapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', show_temp)
+    path('', Main.as_view(), name='main'),
+    path('get_temp/', GetTemp.as_view(), name='get_temp'),
 ]

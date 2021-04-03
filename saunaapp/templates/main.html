@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html lang=xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/jq.js' %}"></script>
 </head>
 <body>
-
-    Tu będzie aplikacja <br/>
-    <h1>{{ temp }} *C</h1><br/>
+    <div>
+        <div>TEMP</div>
+        <div id="temp">{{ temp }}</div>
+    </div>
 </body>
 </html>
