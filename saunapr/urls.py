@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from saunaapp.views import show_temp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', show_temp)
 ]

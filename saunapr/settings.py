@@ -25,7 +25,8 @@ SECRET_KEY = 'mi2f0$-sz$+u$pr4t4zisd-@_*e19zu+!(!+#g(4bqd@9$6b6!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# raspberrypi IP-
+ALLOWED_HOSTS = ['192.168.0.10']
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'saunaapp',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,11 @@ WSGI_APPLICATION = 'saunapr.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+try:
+    from saunapr.database import DATABASES
+except:
+    print('Brak pliku')
+    exit(0)
 
 
 # Password validation
