@@ -1,16 +1,34 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang=xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static 'js/jq.js' %}"></script>
-</head>
-<body>
-    <div>
-        <div>TEMP</div>
-        <div id="temp">{{ temp }}</div>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+{#        <div class="reg">#}
+{#            <span class="param-title">Temperatura</span>#}
+{#            <button class="btn-add" id="btn-temp-add" type="button">+</button>#}
+{#            <input class="param" id="param-temp" name="param-temp" type="text" value="70" readonly>#}
+{#            <button class="btn-sub" id="btn-temp-sub" type="button">-</button>#}
+{#        </div>#}
+{#        <div class="reg">#}
+{#            <span class="param-title">Czas sauna</span>#}
+{#            <button class="btn-add" id="btn-t-sauna-add" type="button">+</button>#}
+{#            <input class="param" id="param-t-sauna" name="param-t-sauna" type="text" value="5" readonly>#}
+{#            <button class="btn-sub" id="btn-t-sauna-sub" type="button">-</button>#}
+{#        </div>#}
+{#        <div class="reg">#}
+{#            <span class="param-title">Czas prysznic</span>#}
+{#            <button class="btn-add" id="btn-t-shower-add" type="button">+</button>#}
+{#            <input class="param" id="param-t-shower" name="param-t-shower" type="text" value="3" readonly>#}
+{#            <button class="btn-sub" id="btn-t-shower-sub" type="button">-</button>#}
+{#        </div>#}
+{#        <div class="reg">#}
+{#            <span class="param-title">Sesje</span>#}
+{#            <button class="btn-add" id="btn-ses-add" type="button">+</button>#}
+{#            <input class="param" id="param-ses" name="param-ses" type="text" value="3" readonly>#}
+{#            <button class="btn-sub" id="btn-ses-sub" type="button">-</button>#}
+{#        </div>#}
+
+
+        {% csrf_token %}
+{#        <input type="submit" class="btn-set-up" value="USTAW">#}
+    </form>
+{% endblock %}

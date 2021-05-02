@@ -1,0 +1,78 @@
+body {
+    width: 800px;
+    height: 480px;
+    padding: 0;
+    margin: 0;
+    /*border: 2px solid white;*/
+    background-image: url("../img/w1.jpg");
+    background-size: 800px;
+    color: gray;
+}
+
+.btn-set-up {
+    font-weight: bold;
+    font-size: 18px;
+    width: 120px;
+    height: 50px;
+    margin: 60px 10px 10px 340px;
+}
+.btn-add {
+    height: 50px;
+    width: 125px;
+    font-weight: bold;
+}
+.btn-sub {
+    height: 50px;
+    font-weight: bold;
+    width: 125px;
+}
+
+.reg {
+    display: inline-block;
+    margin: 60px 10px 10px 50px;
+    width: 125px;
+}
+
+.param {
+    width: 120px;
+    display: block;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.param-title {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header {
+    height: 80px;
+}
+
+.body {
+    width: 795px;
+    height: 396px;
+}
+
+.time {
+    text-align: center;
+    font-size: 50px;
+    float: left;
+    display: block;
+    height: 100%;
+    width: 49%;
+}
+
+
+.temp {
+    text-align: center;
+    font-size: 50px;
+    height: 100%;
+    width: 49%;
+    float: right;
+
+}

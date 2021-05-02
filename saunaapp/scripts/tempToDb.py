@@ -1,5 +1,5 @@
 from psycopg2 import connect, OperationalError
-from read_temp import getTemperature
+from readTemp import getTemperature
 from database import DATABASES
 from time import sleep
 
@@ -44,9 +44,16 @@ def database_connect(value_to_put):
     cursor.close()
     connection.close()
 
+
 if __name__ == '__main__':
+
+    sleep(5)
+    try:
+        database_connect(f"""DELETE FROM saunaapp_temp""")
+    except Exception as error:
+        print(error)
 
     while True:
         temp = getTemperature()
         database_connect(f"""INSERT INTO saunaapp_temp (temp) VALUES ({temp})""")
-        sleep(1)
+        sleep(10)

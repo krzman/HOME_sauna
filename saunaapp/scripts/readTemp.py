@@ -7,11 +7,11 @@ def getTemperature():
     while not tempOK:
         try:
             sensor = w1thermsensor.W1ThermSensor()
-        except Exception:
-            print('error')
+        except Exception as error:
+            print(error)
         else:
-            # temp = int(sensor.get_temperature())
-            temp = sensor.get_temperature()
+            temp = int(sensor.get_temperature())
+            # temp = sensor.get_temperature()
             tempOK = True
 
     return temp

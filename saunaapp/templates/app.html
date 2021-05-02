@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <input id="setTemp" value="{{ temp }}" hidden>
+    <div>{{ stdout }}</div>
+    <div>{{ stderr }}</div>
+
+    <div class="reg">
+        <span class="param-title">CZAS</span><br>
+        <span class="param" id="stoper">00:00</span>
+    </div>
+{#    <div class="reg">#}
+{#        <span class="param-title">SAUNA</span>#}
+{#        <span class="">{{ timeSauna }}</span>#}
+{#    </div>#}
+{#    <div class="reg">#}
+{#        <span class="param-title">PRYSZNIC</span>#}
+{#        <span class="">{{ timeShower }}</span>#}
+{#    </div>#}
+    <button type="submit" id="startButton" disabled>START</button>
+
+{% endblock %}

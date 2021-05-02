@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Main.as_view(), name='main'),
     path('get_temp/', GetTemp.as_view(), name='get_temp'),
+    path('program/<int:temp>', Program.as_view(), name='program'),
+    # path('rasp/', rasp, name='rasp'),
 ]

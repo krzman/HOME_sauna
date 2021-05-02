@@ -1,12 +1,7 @@
 $(function () {
 
-    // // autorefresh main page
-    // setTimeout(function (){
-    //     location.reload();
-    // },1000)
-
     // get element with temp
-    tempElement = $('#temp')
+    const tempElement = $('#temp')
 
     // get actualy temp from database
     var getTemp = function () {
@@ -18,11 +13,9 @@ $(function () {
         }).done(function (response) {
             tempElement.text(response)
         })
-
     }
 
     // refresh temp
-    setInterval(getTemp,1000)
-
+    setInterval(getTemp, 10000)
 
 })

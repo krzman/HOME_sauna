@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sauna</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/getTemp.js' %}"></script>
+    <script src="{% static 'js/getTime.js' %}"></script>
+    <script src="{% static 'js/stoper.js' %}"></script>
+    <script src="{% static 'js/btnSetUp.js' %}"></script>
+    <script src="{% static 'js/btnAddSub.js' %}"></script>
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div class="time">
+        <div>
+            <h1>
+                <span id="time">CZAS</span>
+            </h1>
+
+        </div>
+    </div>
+    <div class="temp">
+        <div>
+            <h1>
+                <span id="temp">TEMP</span>
+                <span>&#8451</span>
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="body">
+    {% block content %}
+        COŚ NIE DZIAŁA
+    {% endblock %}
+</div>
+
+</body>
+</html>
